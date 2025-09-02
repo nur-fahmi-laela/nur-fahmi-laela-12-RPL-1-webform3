@@ -1,0 +1,157 @@
+<!DOCTYPE html> <!-- Mendefinisikan tipe dokumen HTML5 -->
+<html lang="id"> <!-- Elemen utama halaman, dengan bahasa Indonesia -->
+ 
+<head>
+  <meta charset="UTF-8"> <!-- Set karakter encoding ke UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsif untuk perangkat mobile -->
+  <title>Rumah Sakit</title> <!-- Judul tab browser -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Import font Poppins -->
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script> <!-- Library ikon Feather -->
+
+  <link rel="stylesheet" href="dia 1.css"> <!--Link ke file CSS eksternal-->
+  <style>
+    #gatau {
+  max-width: 600px;                 /* Lebar maksimum hasil */
+  margin: 30px auto;                /* Tengah dan jarak dari atas */
+  background-color: #ffffff;        /* Latar putih */
+  border-left: 6px solid #6c63ff;   /* Garis warna di kiri */
+  padding: 20px 30px;               /* Padding dalam */
+  border-radius: 8px;               /* Sudut membulat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan halus */
+  color: #333;                      /* Warna teks */
+}
+
+#gatau h2 {
+  margin-top: 0;                    /* Hilangkan margin atas */
+  color: #6c63ff;                   /* Warna judul biru */
+  font-size: 20px;                  /* Ukuran judul */
+  border-bottom: 1px solid #eee;    /* Garis bawah abu muda */
+  padding-bottom: 10px;             /* Jarak ke bawah */
+}
+
+#gatau p {
+  margin: 8px 0;                    /* Jarak atas dan bawah */
+  line-height: 1.5;                 /* Jarak antar baris */
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== Navbar ==================== -->
+  <nav class="navbar"> <!-- Navbar utama -->
+    <a href="#" class="navbar-logo">Rumah Sakit</a> <!-- Logo atau nama merek -->
+
+    <div class="navbar-nav"> <!-- Navigasi halaman -->
+      <a href="Home.html">Home</a> <!-- Link ke halaman Home -->
+      <a href="Tentang Kami.html">Tentang Kami</a> <!-- Link ke halaman Tentang Kami -->
+      <a class="tombol" href="Layanan.html">Layanan</a> <!-- Link ke halaman Layanan -->
+      <a href="Kontak.html">Kontak</a> <!-- Link ke halaman Kontak -->
+      <a href="Raisya.html">Biodata</a> <!-- Link ke halaman Biodata -->
+    </div>
+  </nav>
+
+  <!-- ==================== Formulir ==================== -->
+    <div class="Formulir"> <!-- Container formulir -->
+    <h1 style="text-transform: uppercase; text-align:center;">
+      Formulir Pendaftaran Pasien <!-- Judul utama formulir -->
+    </h1>
+
+    <!-- Form input -->
+     <form id="FormSaya">
+      <!-- <label>Nama Kamu:</label> -->
+      <script>
+        var nama = prompt("Apa yang Mau Kamu Minta ?", "Nama Lengkap");
+        document.write("<p><b>"+ nama +"</b></p>");
+    </script>
+     <input type="text" id="saya" required>
+    <script>
+        var Umur = prompt("Apa yang Mau Kamu Minta ?", "Umur ");
+        document.write("<p><b>"+ Umur +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+       <script>
+        var Kelamin = prompt("Apa yang Mau Kamu Minta ?", "Jenis Kelamin ");
+        document.write("<p><b>"+ Kelamin +"</b></p>");
+    </script>
+      <input type="text" id="saya" required> <script>
+        var Alamat = prompt("Apa yang Mau Kamu Minta ?", "Alamat");
+        document.write("<p><b>"+ Alamat +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+ <script>
+        var NIK = prompt("Apa yang Mau Kamu Minta ?", "NIK");
+        document.write("<p><b>"+ NIK +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+ <script>
+        var Keluhan = prompt("Apa yang Mau Kamu Minta ?", "Keluhan");
+        document.write("<p><b>"+ Keluhan +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+ <script>
+        var telepon = prompt("Apa yang Mau Kamu Minta ?", "No.Telepon");
+        document.write("<p><b>"+ telepon +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+ <script>
+        var status = prompt("Apa yang Mau Kamu Minta ?", "Status/Profesi");
+        document.write("<p><b>"+ status +"</b></p>");
+    </script>
+      <input type="text" id="saya" required>
+
+      <button type="submit">Kirim</button>
+     </form>
+     <!-- Form dengan ID 'formPasien' -->
+
+  </div>
+
+  <!-- ==================== Hasil Output ==================== -->
+  <div id="gatau" style="display:none;"></div> <!-- Container untuk menampilkan hasil input -->
+
+  <!-- ==================== Script JavaScript ==================== -->
+  <script>
+    const form = document.getElementById("FormSaya"); // Ambil elemen form
+    const hasil = document.getElementById("gatau"); // Ambil elemen hasil
+
+    form.addEventListener("submit", function(dahtau) {
+      dahtau.preventDefault(); // Mencegah halaman reload saat form disubmit
+
+      // Ambil nilai dari semua input
+      const aku = document.getElementById("saya").value;
+
+      // Tampilkan data dalam elemen hasil
+      hasil.style.display = "block"; // Tampilkan elemen yang awalnya disembunyikan
+      hasil.innerHTML = `
+        <h2>DATA PRIBADI</h2>
+        <p><b>${nama} </b> ${aku}</p>
+      `;
+    });
+  </script>
+
+  <script>
+
+var yakin = confirm("Apakah Kamu Yakin Ingin Membuka Form di page Ini?");
+
+if (yakin) {
+
+alert('Selamat Membuat Form Sendiri');
+
+} else {
+
+window.location = "https://www.detik.com";
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
